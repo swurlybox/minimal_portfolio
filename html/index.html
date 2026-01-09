@@ -8,20 +8,34 @@
 
         <!-- Nav bar section w/ icon and navigational links -->
         <div class="bg-c extra" id="sticky-bar" name="sticky-bar">
-            <a class="fg-c" id="nav-icon" href="/"> 
-                <img src="images/favicon.ico" alt="Cityscape Icon">
-            </a>
-            <a class="fg-c" href="/"> 
-                <span class="text">Contact</span>
-            </a>
-            <a class="fg-c" href="#projects-preamble">
-                <span class="text">Projects</span>
-            </a>
+            
+            <div class="" id="left-group">
+                <a class="fg-c" id="nav-icon" href="/"> 
+                    <img src="images/favicon.ico" alt="Cityscape Icon">
+                </a>
+                <a class="fg-c" href="/"> 
+                    <span class="text">Contact</span>
+                </a>
+                <a class="fg-c" href="#projects-preamble">
+                    <span class="text">Projects</span>
+                </a>
+            </div>
+
+            <div class="" id="right-group">
+                <a class="fg-c socials" target="_blank"
+                    href="https://github.com/swurlybox">
+                    <img src="images/github.png" alt="github">
+                </a>
+                <a class="fg-c socials" target="_blank"
+                    href="https://www.linkedin.com/in/edwin-wu-a092b5277">
+                    <img src="images/linkedin.png" alt="linkedin">
+                </a>
+            </div>
         </div>
 
         <!-- Contact Info / Brief -->
         <div class="bg-c extra section" id="contact-section">
-            <img src="images/selfie.jpg" alt="Photo of Edwin"> 
+            <img src="images/casual.jpg" alt="Photo of Edwin"> 
             <div class ="fg-c" id="brief">
                <p class="text"> Edwin Wu | Junior Software Engineer </p>
                <p class="text"> Business Inquiries: wuedwin03[AT]gmail.com </p>
@@ -33,24 +47,23 @@
                     currently focused on learning.
                </p> 
             </div>
-
-
         </div>
 
         <!-- Projects Section -->
-        <div class="" id="projects-preamble">
-        </div>
+        <div class="" id="projects-preamble"></div>
         <div class="bg-c extra section" id="projects-section">
-            Projects
+            <h1 class="text">
+                Projects
+            </h1>
 
             <!-- Here goes card html templates that showcase a small
                  snippet of the projects I've worked on.             -->
 
-            <div class="extra bg-c" id="recipehub-card">
+            <!-- RecipeHub Card -->
+            <div class="extra bg-c card">
                 <img src="images/home_page.png" alt="recipehub homepage">
-
                 <div class="fg-c caption" id="recipehub-caption">
-                   <h2 class="text" name="project-title">
+                   <h2 class="text">
                         RecipeHub
                    </h2> 
                    <p class="text">
@@ -70,19 +83,81 @@
                 </div>
             </div>
 
-            <!--
-                <img src="images/carousel.png"
-                     alt="recipehub homepage carousel">
-                <img src="images/cookbook_viewpage.png"
-                     alt="recipehub cookbook viewpage">
-                <img src="images/search_recipes.png"
-                     alt="recipehub search page">
-            -->
-        </div>
+            <!-- BS Liar's Bar Card -->
+            <div class="extra bg-c card">
+                <img class="text" src="images/bs_landing.png"
+                    alt="bs landing page">
+                <div class="fg-c caption" id="bs-caption">
+                    <h2 class="text">
+                        BS Liar's Bar
+                    </h2>
+                    <p class="text">
+                        An online multiplayer web-based card game inspired
+                        by the traditional card game Bullshit (or Cheat) and
+                        the popular Steam game Liar's Bar.
 
-        <p>
-            Hello World!
-            Minor change!
-        </p>
+                        <br>
+                        <br>
+
+                        Yet another full-stack CRUD application but implemented
+                        as a web game. Game state is preserved on the database,
+                        and the players get game updates in real-time via
+                        WebSockets. Served as a team project for an Internet
+                        App and Design elective at SF State University.
+                    </p>
+                </div>
+            </div> 
+
+            <!-- Line-Following Car Card -->
+            <div class="extra bg-c card">
+                <img class="text" src="images/frankencar.jpg"
+                    alt="line following car">
+                <div class="fg-c caption" id="car-caption">
+                    <h2 class="text">
+                        Line Following Car
+                    </h2>
+                    <p class="text">
+                        A line-following, obstacle-avoiding, color-sensing
+                        automated franken-car. Designed with the intent to
+                        completely navigate a race track correctly.
+
+                        <br>
+                        <br>
+
+                        A team embedded Linux project that utilized a
+                        RaspberryPi02w for the MCU, various sensors,
+                        and laser-cut/3D printed components. One of the most
+                        fun projects I've had during my University days, most
+                        of which is attributed to the wonderful team I worked
+                        with.
+                    </p>
+                </div>
+            </div>
+
+            <!-- PMP card -->
+            <div class="extra bg-c card">
+                <img class="text" src="images/stm32-board.jpg" 
+                    alt="portable media player">
+                <div class="fg-c caption" id="mp3 player">
+                    <h2 class="text">
+                        Portable Media Player (Actively Working On)
+                    </h2>
+                    <p class="text">
+                        A portable media player project intended to get my 
+                        feet wet in the world of bare-metal embedded.
+
+                        <br>
+                        <br>
+
+                        Key design goals: <br>
+                            - low power   <br>
+                            - portability <br>
+                            - focus on fundamentals <br>
+                            - getting it to work <br>
+                            - decent sound quality
+                    </p>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

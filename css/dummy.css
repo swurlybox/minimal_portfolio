@@ -22,8 +22,6 @@ body {
 
 .bg-c {
     background-color: #2a2a2a;
-    margin: 5px 0;
-    min-width: 800px;
 }
 
 .fg-c {
@@ -50,9 +48,24 @@ body {
 
 /* Every flex-item should be the same size with same spacing */
 #sticky-bar > * {
-    height: 50px;
-    width: auto;
-    margin: 5px 5px;  
+    display: flex;
+    height: 60px;
+}
+
+#sticky-bar > #left-group {
+    margin: 5px auto 5px 5px;
+}
+
+#sticky-bar > #left-group > * {
+    margin: 5px;
+}
+
+#sticky-bar > #right-group {
+    margin: 5px 5px 5px auto;
+}
+
+#sticky-bar > #right-group > * {
+    margin: 5px;
 }
 
 /* nav-icon on the nav bar */
@@ -60,19 +73,26 @@ body {
     width: 50px;
 }
 
-#sticky-bar > a > img {
-    width: 100%;
-    height: 100%;
-}
-
-#sticky-bar > a {
+#left-group > a {
     text-decoration: none;
 }
 
 /* nav-buttons */
-#sticky-bar > a > span {
+#left-group > a > span {
     line-height: 50px;
     margin: 0 5px;
+}
+
+/* Links to my other socials: GitHub, LinkedIn */
+#right-group > .socials {
+   height: 50px;
+   width: 50px;
+}
+
+#right-group >.socials > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 /* --------- SECTIONS ---------- */
@@ -82,30 +102,23 @@ body {
 
 #contact-section {
     display: flex;
-    max-width: 800px;
-    margin: 0px auto;
+    width: 800px; 
+    margin: 5px auto;
 }
 
-#contact-section > img {
+#contact-section > * {
     margin: 5px;
     height: 200px;
-    width: 200px;
-    min-width: 200px;
+}
+
+
+#contact-section > img { 
+    min-width: 200px; /* necessary as items in flexbox may shrink */
     object-fit: cover;
-}
-
-#contact-section > #brief {
-    margin: 5px;
-    height: 200px;
-    width: 100%;
 }
 
 #contact-section p {
     margin-left: 5px;
-}
-
-#contact-section #brief-desc { 
-    max-width: 600px;
 }
 
 /* --------- PROJECTS SECTION -------- */
@@ -116,36 +129,46 @@ body {
 }
 
 #projects-section {
-    height: 2000px;
+    margin: 0 auto;
+    width: fit-content;
+    height: fit-content;
 }
 
-#recipehub-card {
+#projects-section > h1 {
+    padding-left: 20px;
+}
+
+
+/* ---------- CARDS STYLING ------- */
+.card {
+    min-height: 200px;
     width: fit-content;
     display: flex;
-    margin: 0 auto;
+    margin: 30px;
 }
 
-
-#recipehub-card > * {
+.card > * {
     margin: 5px;
 }
 
-#recipehub-card > img {
+.card > img {
     height: 300px;
     width: 500px;
     min-width: 300px;
-    margin: auto 0;
+    object-fit: cover;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
-#recipehub-caption {
+.caption {
     width: 300px;
     min-width: 300px;
 }
 
-#recipehub-caption:hover {
+.caption:hover {
     cursor: pointer;
 }
 
-#recipehub-caption > * {
+.caption > * {
     padding: 0 5px;
 }
