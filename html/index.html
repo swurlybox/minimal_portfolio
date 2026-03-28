@@ -59,9 +59,34 @@
 
             <!-- Here goes card html templates that showcase a small
                  snippet of the projects I've worked on.             -->
+           
+            <!-- PMP card -->
+            <div id="mp3-card" class="extra bg-c card">
+                <img class="text" src="images/stm32-board.jpg" 
+                    alt="portable media player">
+                <div class="fg-c caption" id="mp3 player">
+                    <h2 class="text">
+                        Portable Media Player (Actively Working On)
+                    </h2>
+                    <p class="text">
+                        A portable media player project intended to get my 
+                        feet wet in the world of bare-metal embedded.
+
+                        <br>
+                        <br>
+
+                        Key design goals: <br>
+                            - low power   <br>
+                            - portability <br>
+                            - focus on fundamentals <br>
+                            - getting it to work <br>
+                            - decent sound quality
+                    </p>
+                </div>
+            </div>
 
             <!-- RecipeHub Card -->
-            <div class="extra bg-c card">
+            <div id="recipehub-card" class="extra bg-c card">
                 <img src="images/home_page.png" alt="recipehub homepage">
                 <div class="fg-c caption" id="recipehub-caption">
                    <h2 class="text">
@@ -85,7 +110,7 @@
             </div>
 
             <!-- BS Liar's Bar Card -->
-            <div class="extra bg-c card">
+            <div id="bsliarsbar-card" class="extra bg-c card">
                 <img class="text" src="images/bs_landing.png"
                     alt="bs landing page">
                 <div class="fg-c caption" id="bs-caption">
@@ -110,7 +135,7 @@
             </div> 
 
             <!-- Line-Following Car Card -->
-            <div class="extra bg-c card">
+            <div id="lfr-card" class="extra bg-c card">
                 <img class="text" src="images/frankencar.jpg"
                     alt="line following car">
                 <div class="fg-c caption" id="car-caption">
@@ -135,34 +160,9 @@
                 </div>
             </div>
 
-            <!-- PMP card -->
-            <div class="extra bg-c card">
-                <img class="text" src="images/stm32-board.jpg" 
-                    alt="portable media player">
-                <div class="fg-c caption" id="mp3 player">
-                    <h2 class="text">
-                        Portable Media Player (Actively Working On)
-                    </h2>
-                    <p class="text">
-                        A portable media player project intended to get my 
-                        feet wet in the world of bare-metal embedded.
-
-                        <br>
-                        <br>
-
-                        Key design goals: <br>
-                            - low power   <br>
-                            - portability <br>
-                            - focus on fundamentals <br>
-                            - getting it to work <br>
-                            - decent sound quality
-                    </p>
-                </div>
-            </div>
         </div> <!-- end of projects section-->
 
-          
-        <div id="popup-widget-background"> background </div>
+        <div id="popup-widget-background"></div>
         <div id="popup-widget" class="bg-c extra">
             <div id="widget-header" class="extra">    
                 <div>Widget Header</div>
@@ -170,16 +170,79 @@
             </div>
 
             <div id="widget-description" class="extra">
-                Contents will differ depending on which card was selected.
-                This part is scrollable to reveal more information.
-                <div class="fg-c extra"> 
-                    0
+                <div id="recipehub" class="fg-c extra"> 
+                    3/27/26: No description available yet, its been a few
+                        years already, so I'll have to recall my progression
+                        through this project.
                 </div>
-                <div class="bg-c extra"> 
-                    1
+                <div id="bsliarsbar" class="bg-c extra"> 
+                    3/27/26: No description available yet.
                 </div>
-                <div class="fg-c extra"> 
-                    2
+                <div id="lfr" class="fg-c extra"> 
+                    3/27/26: No description available yet.
+                </div>
+                <div id="mp3" class="bg-c extra">
+                    <img src="images/mp3_overall0.jpg">
+                    <p>
+                        3/27/26: I started this project ~3 months ago in January,
+                        since I developed an interest in embedded systems and
+                        low-level programming. This was my first real exposure
+                        to programming on an MCU bare-metal, with operating system
+                        to abstract away the hardware.
+                    </p>
+                    <p>
+                        I wanted to do an MP3 player because I enjoy listening
+                        to music while walking, working, relaxing. I also wanted
+                        a low-power solution rather than just listening to music
+                        with my smartphone device. It's a project that I feel
+                        I have a lot of interest in, and it also doesn't seem
+                        too complicated for a beginner project (at the bare minimum
+                        atleast), and can be expanded upon with new features.
+                    </p>
+                    <p>
+                        The first couple of weeks were spent reading and
+                        understanding the basics of bare-metal programming, and
+                        just getting a gist of everything in this new environment.
+                        I read articles, books. watched videos and courses to
+                        answer some fundamental questions; {What is an embedded
+                        system?, What is a microcontroller?, What is bare-metal
+                        vs RTOS?, etc}.
+                    </p>
+                    <img src="images/code_terminal.jpg">
+                    <p>
+                        Then the next few were spent exploring the peripherals,
+                        and incrementally building the subsystems from the ground
+                        up. 
+                        I blinked an LED, then I faded the LED. 
+                        I printed some text to my PC terminal via UART,
+                        then I implemented printf debugging.
+                        I read datasheets and specifications on my external
+                        components. Then I talked to them via SPI and I2C.
+                    </p>
+                    <p>
+                        As I worked along these past 3 months, I learned to
+                        appreciate how things worked under the hood, but also
+                        why abstraction exists as well. I never thought that
+                        I'd have to implement my own system calls, create
+                        a graphics API, or even integrate a file system driver.
+                        Because I'm so used to the general-purpose computer
+                        providing these services for me already, I never had to
+                        think about them.
+                    </p>
+                    <img src="images/mp3_display.jpg">
+                    <p>
+                        As of writing, the project isn't finished yet. I've
+                        implemented a file system, display, and button controls,
+                        but I still need to implement audio playback. But the 
+                        point is: I've learned quite a lot from working on this
+                        project and will continue updating this blurb. This
+                        probably isn't enough to land an entry level job yet
+                        in the embedded systems field, seems like most companies
+                        want experience for an entry-level role, so I'll keep
+                        working on projects after this one. I intend to tackle
+                        a problem that would involve an RTOS, and maybe include
+                        IOT and high-speed protocols like USB, BLE, or Ethernet.
+                    </p>
                 </div>
             </div>
         </div>
