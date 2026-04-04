@@ -229,6 +229,10 @@ body {
     height: auto;
 }
 
+.widget-description-separator {
+    height: 10px;
+}
+
 #mp3 > img {
     height: 300px;
     margin: 5%;
