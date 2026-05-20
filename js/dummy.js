@@ -2,41 +2,43 @@ const popup_widget = document.getElementById("popup-widget");
 const cards = document.getElementsByClassName("card");
 const popup_widget_bg = document.getElementById("popup-widget-background");
 const popup_widget_close = document.getElementById("widget-close-button");
+const widget_header_title = document.getElementById("widget-header-title");
 
 const rhd = document.getElementById("recipehub");
 const bslbd = document.getElementById("bsliarsbar");
 const lfrd = document.getElementById("lfr");
 const mp3d = document.getElementById("mp3");
+const zephyr_mp3d = document.getElementById("zephyr-mp3");
 
 let state;
 let intervalId;
 let op = 0;
 
-const card_select = {
-    RECIPEHUB: 0,
-    LIARSBAR: 1,
-    LFR: 2,
-    MP3: 3,
-}
-
-console.log(card_select);
-
+/* Depending on which card was clicked, display the relevant information.  */
 for (const el of cards) {
     el.addEventListener("click", () => {
-        /* render description*/
+        /* Clear every description. */
         rhd.style.display = "none";
         bslbd.style.display = "none";
         lfrd.style.display = "none";
         mp3d.style.display = "none";
+        zephyr_mp3d.style.display = "none";
 
         if (el.id == "recipehub-card") {
             rhd.style.display = "block";
+            widget_header_title.textContent = "Recipe Hub"
         } else if (el.id == "bsliarsbar-card") {
             bslbd.style.display = "block";
+            widget_header_title.textContent = "BS Liar's Bar"
         } else if (el.id == "lfr-card") {
             lfrd.style.display = "block";
+            widget_header_title.textContent = "Line Following Robot"
         } else if (el.id == "mp3-card") {
             mp3d.style.display = "block";
+            widget_header_title.textContent = "MP3 Player Prototype"
+        } else if (el.id == "zephyr-mp3-card") {
+            zephyr_mp3d.style.display = "block";
+            widget_header_title.textContent = "Zephyr MP3 Player"
         }
 
         /* fade in widget*/

@@ -50,6 +50,11 @@
             </div>
         </div>
 
+        <div id="thoughts" class="bg-c extra text">
+            <p>What I'm up to...</p> 
+            <p>Vanilla JS for web, OpenGL for graphics, and Zephyr RTOS.</p>
+        </div>
+
         <!-- Projects Section -->
         <div class="" id="projects-preamble"></div>
         <div class="bg-c extra section" id="projects-section">
@@ -59,7 +64,35 @@
 
             <!-- Here goes card html templates that showcase a small
                  snippet of the projects I've worked on.             -->
-           
+          
+            <div id="zephyr-mp3-card" class="extra bg-c card">
+                <img class="text" src="images/nrf52840dk.jpg"
+                    alt="mp3-player w/ RTOS">
+                <div class="fg-c caption" name="zephyr-mp3-caption">
+                    <h2 class="text">
+                        MP3-Player w/ Zephyr RTOS (in progress)
+                    </h2>
+                    <p class="text">
+                        A rewrite of my previous bare-metal mp3 player
+                        project, this time in the Zephyr RTOS environment.
+
+                        <br>
+                        <br>
+
+                        Intended new user features: <br>
+                        - Bluetooth Low Energy connectivity for audio streams.
+                            (LE audio) <br>
+                        - Music visualizer  <br>
+                        - Battery Management System for portability and
+                            charging    <br>
+                                        <br>
+                        All the previous features in the bare-metal project,
+                        as well as address some of the issues that were left
+                        unresolved.
+                    </p>
+                </div>
+            </div>
+
             <!-- PMP card -->
             <div id="mp3-card" class="extra bg-c card">
                 <img class="text" src="images/stm32-board.jpg" 
@@ -165,22 +198,199 @@
         <div id="popup-widget-background"></div>
         <div id="popup-widget" class="bg-c extra">
             <div id="widget-header" class="extra">    
-                <div>Widget Header</div>
+                <div id="widget-header-title">Title goes here</div>
                 <input id="widget-close-button" type="button" value="">
             </div>
 
             <div id="widget-description" class="extra">
                 <div id="recipehub" class="fg-c extra"> 
-                    3/27/26: No description available yet, its been a few
-                        years already, so I'll have to recall my progression
-                        through this project.
+                    <p>
+                        5/20/26: A recipe-sharing web application designed
+                        for users to share recipes and collaborate on writing
+                        up recipe documents in real-time. This project was
+                        one that ended up in failure, so why put it on my
+                        portfolio? It taught me quite a few things in the process.
+                    </p>
+
+                    <p>
+                        Software projects can fail. And that's okay. It's
+                        something that any developer should experience atleast
+                        once in their life.
+                        <br><br>
+                        Here's my perspective on why it failed: <br>
+                            - shaky or unclear user requirements <br>
+                            - lack of clear direction for the team <br>
+                            - lack of motivation to work on the project <br>
+                            - lack of technical ability <br><br>
+                        
+                        We did pretty well in the initial design phases. Hardly
+                        any coding was involved, and it seemed like our
+                        mockups, user stories, and initial requirements seemed
+                        solid. <br><br>
+
+                        It was during the UI/UX Figma design phase and coding
+                        phase where we started declining and going downhill.
+                        The biggest problem here was a lack of communication
+                        and discipline to meet deadlines.
+                        <br><br>
+                        What I should've done: <br>
+                            - took action as early as possible and address 
+                                these problems with team members in one-on-ones
+                                . This asks why the motivation problem exists
+                                in the first place, and is different for each
+                                member. <br>
+                            - provide team members with learning resources and
+                                help them by hosting workshops. This would've
+                                helped with the technical ability problem. <br>
+                            - being more realistic with our requirements.
+                                Nearing the end of the project, we realized
+                                we didn't have the time to complete some
+                                of our initial requirements because we haven't
+                                done enough research and realized implementing
+                                some features would've been tough. <br>
+                    </p>
                 </div>
                 <div id="bsliarsbar" class="bg-c extra"> 
-                    3/27/26: No description available yet.
+                    <p>
+                        5/20/26: An online-multiplayer web-based card game 
+                        intended to model the popular Steam game Liar's Bar. 
+                        This was a team based project that I did with 3 other
+                        classmates for an Internet App and Design course back 
+                        in Jan 2025.
+                    </p> 
+
+                    <p>
+                        Some of the main goals or key takeaways from this class
+                        was: <br>
+                            - learn to coordinate in a team environment <br>
+                            - define user initial requirements <br>
+                            - draw mockups / wireframes for webpages <br>
+                            - database design <br>
+                            - organize and write modular code <br>
+                            - maintain state for each user through sessions,
+                                websockets, and database. <br>
+                    </p>
+
+                    <p>
+                        In the process, we got familiar with some of the tech
+                        stacks we used for this project: <br>
+                            - typescript w/ express and node.js <br>
+                            - tailwindcss <br>
+                            - build systems and dev tooling like parcel,
+                                eslint, ts-node, db migration files <br>
+                            - postgresql <br>
+                            - socket-io library <br>
+                    </p>
+
+                    <p>
+                        There was some usage of AI, particularly for generating
+                        styling for various elements in our website. As much 
+                        as I dislike using AI in my work personally, this was
+                        a team project, and I had to maintain an open attitude
+                        to other developers contributions. The main argument
+                        here was that we were not UI/UX designers, so prompting
+                        and generating that CSS and integrating it within our
+                        project saved us quite a bit of time. I believe we used
+                        an LLM from Vercel(?).
+                    </p>
                 </div>
                 <div id="lfr" class="fg-c extra"> 
-                    3/27/26: No description available yet.
+                    <p>
+                        5/20/26: A Line Following Robot Car made with a team
+                        of university students for an Embedded Linux Systems
+                        course. Capabilities include: <br>
+                            - object detection and avoidance <br>
+                            - line following <br>
+                            - color detection (failed in final run) <br>
+                    </p> 
+
+                    <p>
+                        I contributed to the project via: <br>
+                            - initial chassis designs on paper and TinkerCAD <br>
+                            - wrote some libraries for line-sensing and 
+                                color detection, as well as algorithm analysis
+                                and improvements for the PID error correction. <br>
+                            - software/hardware debugging, aiding in test runs <br>
+                    </p>
+
+                    <p>
+                        In hindsight, I think the design I made for the chassis
+                        resulted in the vehicle being a bit bulky and not as
+                        fast as it could be. The choice of 2 wheels and a ball
+                        bearing didn't give the car enough power navigate the
+                        track efficiently. The default car design that comes
+                        with the kit was more compact. You live and learn.
+                    </p>
+
+                    <p>
+                        As for obstacle detection, we made a last minute
+                        implementation change as the obstacle avoidance wasn't
+                        robust enough. We also used PID concepts for obstacle
+                        navigation.
+                    </p>
+
+                    <p>
+                        All in all, we did okay on the final run. The car
+                        completed the track at the cost of color detection
+                        capability. As far as I know, not many teams in our
+                        class got that working correctly.
+                    </p>
+
+                    <p>
+                        The project gave me an idea of how to work with the
+                        RaspberryPi on Embedded Linux, and how to interface
+                        with the hardware by integrating ready-made software 
+                        libraries and drivers.
+                    </p>
+
                 </div>
+
+                <div id="zephyr-mp3" class="bg-c extra">
+                    <p>
+                        5/20/26: An excuse to start working with the Zephyr
+                        RTOS environment. After a 1 month break since pausing
+                        on the bare-metal mp3 in April, I've decided to
+                        rewrite it while integrating Zephyr RTOS. There really
+                        is no good reason as to why use an RTOS for this
+                        project. This isn't the kind of project where real-time
+                        constraints are super critical. It can totally be done 
+                        with a simple super-loop and interrupt architecture. 
+                        However, I wanted to learn RTOS, and so here we are. 
+                    </p>
+
+                    <p>
+                        The multi-threaded architecture that comes with 
+                        working with an RTOS might allow me to do music
+                        visualization, audio playback, and user-input as 
+                        three concurrent tasks. I'm also using NRF Connect
+                        SDK, which provides many abstraction layers such as 
+                        KConfig, DeviceTree, and peripheral libraries.
+                        KConfig is used within the build system to configure
+                        software components, and decide which software modules
+                        to include from Zephyr's libraries.
+                        
+                        DeviceTree can be thought of as a collection of files
+                        that describes the hardware components of a system to
+                        the Zephyr RTOS, so as to keep the hardware configs
+                        separate from the application source code. This allows
+                        application code to be written in a portable way (given
+                        that you stay within the Zephyr ecosystem and support
+                        for a given board is provided). 
+                    </p>
+
+                    <p>
+                        The MCU I plan to work
+                        with is the nRF52840, which comes with a 2.4GHz
+                        radio transceiver for BLE applications. With that I'll
+                        try to implement BLE audio streaming to earbuds that
+                        support the Bluetooth Low Energy protocol. Keep in
+                        mind that the radio doesn't support Bluetooth Classic,
+                        which most headphones support. This is a heavy downside
+                        and an oversight on my part when I was selecting a board
+                        to work with.
+                    </p>
+                </div>
+                
                 <div id="mp3" class="bg-c extra">
                     <img src="images/mp3_overall0.jpg">
                     <p>
@@ -244,7 +454,7 @@
                         IOT and high-speed protocols like USB, BLE, or Ethernet.
                     </p>
 
-                    <div class="widget-description-separator extra">
+                    <div class="widget-description-separator">
                     </div>
 
                     <p>

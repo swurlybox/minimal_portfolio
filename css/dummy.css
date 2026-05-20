@@ -99,6 +99,16 @@ body {
 /* --------- SECTIONS ---------- */
 
 
+/* --------- THOUGHTS ---------- */
+#thoughts {
+    width: 800px;
+    margin: 5px auto;
+}
+
+#thoughts > p {
+    margin: 5px 5px;
+}
+
 /* --------- CONTACT SECTION ---- */
 
 #contact-section {
@@ -230,7 +240,8 @@ body {
 }
 
 .widget-description-separator {
-    height: 10px;
+    height: 5px;
+    background-color: white;
 }
 
 #mp3 > img {
